@@ -21,11 +21,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
         }
         header h1 {
             color: #007BFF;
+            margin: 0;
         }
         /* Franja azul celeste */
         .blue-banner {
@@ -36,8 +39,7 @@
             margin-bottom: 30px;
         }
         .profile-photo {
-            float: left;
-            margin-right: 20px;
+            margin-left: 20px;
         }
         .profile-photo img {
             width: 150px;
@@ -45,7 +47,6 @@
             border-radius: 50%;
         }
         .social-links {
-            float: right;
             text-align: right;
         }
         .social-links a {
@@ -107,20 +108,21 @@
     <div class="container">
         <header>
             <h1>HUGO VECINO PICO</h1>
-            <!-- Franja azul celeste -->
-            <div class="blue-banner"></div>
             <div class="profile-photo">
                 <img src="foto%20perfil.jpg" alt="Foto personal">
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/hugovecino/" target="_blank">LinkedIn</a>
-                <a href="https://www.youtube.com/@cibersecurity16" target="_blank">YouTube</a>
-                <a href="https://yourcibersecurity.blogspot.com/" target="_blank">Blogger</a>
-                <a href="mailto:hugo.vecino@gmail.com">Correo</a>
-                <a href="https://hvecino21.github.io/" target="_blank">GitHub</a>
-            </div>
-            <div class="clear"></div>
         </header>
+
+        <!-- Franja azul celeste -->
+        <div class="blue-banner"></div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/hugovecino/" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/@cibersecurity16" target="_blank">YouTube</a>
+            <a href="https://yourcibersecurity.blogspot.com/" target="_blank">Blogger</a>
+            <a href="mailto:hugo.vecino@gmail.com">Correo</a>
+            <a href="https://hvecino21.github.io/" target="_blank">GitHub</a>
+        </div>
 
         <section>
             <h2>About me</h2>
