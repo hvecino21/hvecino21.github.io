@@ -3,158 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mi CV - Nombre Apellido</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Mi CV - Programador, Asesor, Autor">
+    <title>Mi CV - [Tu Nombre]</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             color: #333;
-            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
         }
-
         .container {
-            width: 80%;
+            max-width: 1200px;
             margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
             padding: 20px;
         }
-
-        .header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #2a2a72;
-            color: white;
+        header h1 {
+            color: #007BFF;
         }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .profile-photo {
+            float: left;
+            margin-right: 20px;
         }
-
-        .header h2 {
-            font-size: 1.5em;
-            font-weight: 300;
+        .profile-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
         }
-
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 30px;
+        .social-links {
+            float: right;
+            text-align: right;
         }
-
-        .content .section {
-            width: 100%;
-            margin-bottom: 30px;
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
         }
-
-        .content h3 {
-            font-size: 1.8em;
-            color: #2a2a72;
-            border-bottom: 2px solid #2a2a72;
+        .clear {
+            clear: both;
+        }
+        section {
+            margin-top: 40px;
+        }
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
             padding-bottom: 10px;
-            margin-bottom: 15px;
         }
-
-        .content p {
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .experience, .education {
-            width: 48%;
-        }
-
-        .skills {
+        table {
             width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
-
-        .footer {
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f1f1;
+        }
+        footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 40px;
             padding: 20px;
-            background-color: #2a2a72;
+            background-color: #007BFF;
             color: white;
         }
-
-        .footer p {
-            font-size: 1.2em;
-        }
-
-        @media (max-width: 768px) {
-            .experience, .education {
-                width: 100%;
-            }
-
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .header h2 {
-                font-size: 1.2em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            .header h2 {
-                font-size: 1em;
-            }
-
-            .container {
-                width: 95%;
-            }
+        footer a {
+            color: white;
+            text-decoration: none;
         }
     </style>
+    <script>
+        function increaseCounter() {
+            if (localStorage.pagecount) {
+                localStorage.pagecount = Number(localStorage.pagecount) + 1;
+            } else {
+                localStorage.pagecount = 1;
+            }
+            document.getElementById("visitCounter").innerText = localStorage.pagecount;
+        }
+        window.onload = increaseCounter;
+    </script>
 </head>
 <body>
-
-    <div class="header">
-        <h1>Nombre Apellido</h1>
-        <h2>Tu Profesión | Título</h2>
-    </div>
-
     <div class="container">
-        <div class="content">
-            <div class="section experience">
-                <h3>Experiencia Profesional</h3>
-                <p><strong>Posición en Empresa A</strong> (Enero 2020 - Presente)</p>
-                <p>Descripción breve de tus responsabilidades y logros en la empresa.</p>
-                <p><strong>Posición en Empresa B</strong> (Mayo 2018 - Diciembre 2019)</p>
-                <p>Descripción breve de tus responsabilidades y logros en la empresa.</p>
+        <header>
+            <h1>[Tu Nombre]</h1>
+            <div class="profile-photo">
+                <img src="ruta_a_tu_foto.jpg" alt="Foto personal">
             </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
+                <a href="https://youtube.com/tu-canal" target="_blank">YouTube</a>
+                <a href="https://tublogger.com" target="_blank">Blogger</a>
+                <a href="mailto:tuemail@example.com">Correo</a>
+                <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>
+            </div>
+            <div class="clear"></div>
+        </header>
 
-            <div class="section education">
-                <h3>Educación</h3>
-                <p><strong>Universidad X</strong> (2014 - 2018)</p>
-                <p>Licenciatura en... (Descripción breve del enfoque de tus estudios).</p>
-                <p><strong>Certificación Y</strong> (2020)</p>
-                <p>Curso o certificación relevante.</p>
-            </div>
+        <section>
+            <h2>Sobre mí</h2>
+            <p>[Aquí va tu recorrido profesional, un párrafo que describe tu carrera y logros más importantes].</p>
+        </section>
 
-            <div class="section skills">
-                <h3>Habilidades</h3>
-                <p>- Habilidad 1</p>
-                <p>- Habilidad 2</p>
-                <p>- Habilidad 3</p>
-                <p>- Habilidad 4</p>
-            </div>
-        </div>
+        <section>
+            <h2>Educación</h2>
+            <p>[Tus estudios principales, por ejemplo, títulos universitarios o equivalentes].</p>
+        </section>
+
+        <section>
+            <h2>Cursos y Certificaciones</h2>
+            <p>[Lista de cursos recientes y certificaciones que posees].</p>
+        </section>
+
+        <section>
+            <h2>Experiencia Profesional</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Rol</th>
+                        <th>Funciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Empresa 1</td>
+                        <td>Rol 1</td>
+                        <td>Descripción de funciones en Rol 1</td>
+                    </tr>
+                    <tr>
+                        <td>Empresa 2</td>
+                        <td>Rol 2</td>
+                        <td>Descripción de funciones en Rol 2</td>
+                    </tr>
+                    <!-- Añadir más filas según tus experiencias profesionales -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>Visitas a esta página: <span id="visitCounter">0</span></p>
+            <p>© 2024 [Tu Nombre] - Todos los derechos reservados | <a href="libros.html">Libros</a> | <a href="charlas.html">Charlas</a> | <a href="asesorias.html">Asesorías</a></p>
+        </footer>
     </div>
-
-    <div class="footer">
-        <p>Contacto: email@ejemplo.com | Teléfono: +123456789</p>
-    </div>
-
 </body>
 </html>
